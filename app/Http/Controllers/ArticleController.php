@@ -69,6 +69,7 @@ class ArticleController extends Controller
         'category_id'=>$request->category,
         'user_id' => Auth::user()->id,
     ]);
+    
     $tags = explode(',', $request->tags);
 
     foreach ($tags as $i => $tag) {
