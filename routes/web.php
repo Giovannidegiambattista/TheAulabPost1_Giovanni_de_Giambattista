@@ -21,7 +21,7 @@ use App\Http\Controllers\RevisorController;
 Route::get('/', [PublicController::class,'homepage'])->name('homepage');
 
 Route::get('/article/index',[ArticleController::class, 'index'])->name('article.index');
-Route::get('/article/show/{article}',[ArticleController::class, 'show'])->name('article.show');
+Route::get('/article/show/{article:slug}',[ArticleController::class, 'show'])->name('article.show');
 Route::get('/article/category/{category}',[ArticleController::class, 'byCategory'])->name('article.byCategory');
 Route::get('/article/user/{user}',[ArticleController::class, 'byUser'])->name('article.byUser');
 Route::get('/careers',[PublicController::class, 'careers'])->name('careers');

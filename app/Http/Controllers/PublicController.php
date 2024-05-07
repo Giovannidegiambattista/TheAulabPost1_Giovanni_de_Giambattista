@@ -14,14 +14,12 @@ class PublicController extends Controller
     public function __construct(){
         $this->middleware('auth')-> except('homepage');
     }
-  
-    
 
 
     public function homepage() {
     $articles = Article::where('is_accepted', true)->orderBy('created_at', 'desc')->take(4)->get();
     
-         return view('welcome', compact('articles'));
+         return view('welcome', compact ('articles'));
     }
     public function careers(){
         return view ('careers');
@@ -36,8 +34,11 @@ class PublicController extends Controller
     $role = $request ->role;
     $email = $request ->email;
     $message = $request->message;
+
     Mail::to('admin@theaulabpost.it')->send(new CareerRequestMail(compact('role','email', 'message')));
-  switch ($role) {
+    
+    
+    switch ($role) {
     case 'admin':
         $user->is_admin = NULL;
         break;

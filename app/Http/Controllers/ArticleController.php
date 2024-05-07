@@ -6,6 +6,7 @@ use App\Models\Tag;
 use App\Models\User;
 use App\Models\Article;
 use App\Models\Category;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
@@ -59,7 +60,7 @@ class ArticleController extends Controller
             'body'=>'required|min:10',
             'image'=>'image|required',
             'category'=>'required',
-             'tags'=>'required',
+            'tags'=>'required',
            
         ]);
     $article = Article::create([
@@ -69,6 +70,7 @@ class ArticleController extends Controller
         'image'=>$request->file('image')->store('public/images'),
         'category_id'=>$request->category,
         'user_id' => Auth::user()->id,
+        'slug' => Str::slug($request->title),
     ]);
     
     $tags = explode(',', $request->tags);
@@ -124,6 +126,7 @@ class ArticleController extends Controller
         'subtitle'=>$request->subtitle,
         'body'=>$request->body,
         'category_id'=>$request->category,
+        'slug' => Str::slug($request->title),
        
     ]);
         if ($request->image) {
