@@ -9,13 +9,19 @@
         @else
             <p class="small text-muted st-italic text-capitalize">Non categorizzato</p>
         @endif
-
+        
+        @if ($user)
+        <a href="{{$urlUser}}"  class="small text-muted d-flex justify-content-center align-items-center">{{$user}}</a>
+            
+        @else
+            <p class="small text-muted st-italic text-capitalize">Nessun utente</p>
+        @endif
        <span class="text-muted small fst-italic"> Tempo di lettura {{$readDuration}} min </span>
        
        
        @if ($tags)
            
-       <p class="small fst-itaic text-capialize">
+       <p class="small fst-italic text-capialize">
            @foreach ($tags as $tag)
            #{{$tag->name}}
               

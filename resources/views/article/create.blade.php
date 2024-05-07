@@ -37,6 +37,7 @@
         <div class="mb-3">
             <label for="category" class="form-label">Categorie:</label>
             <select name="category" id="category" class="form-control text-capitalise">
+                <option value="" selected >Valore non corretto</option>
                 @foreach($categories as $category)
                 <option value="{{$category->id}}">{{$category->name}}</option>
                 @endforeach

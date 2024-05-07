@@ -20,7 +20,7 @@
         @method('put')
         <div class="mb-3">
             <label for="title" class="form-label">Titolo:</label>
-            <input type="text" name="title" class="form-control" id="title" value="{{$article->title)}}">
+            <input type="text" name="title" class="form-control" id="title" value="{{$article->title}}">
         </div>
         <div class="mb-3">
             <label for="subtitle" class="form-label">Sottotitolo:</label>

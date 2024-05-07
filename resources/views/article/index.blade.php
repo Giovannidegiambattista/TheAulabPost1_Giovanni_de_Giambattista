@@ -13,13 +13,14 @@
                 :tags="$article->tags"
                 title="{{$article->title}}"
                 subtitle="{{$article->subtitle}}"
-                image="{{$article->image}}" 
-                category="{{$article->category->name}}"
+                image="{{$article->image}}"
+                category="{{$article->category->name ?? 'Categoria non selezionata'}}"
                 data="{{$article->created_at->format('d/m/Y')}}"
                 user="{{$article->user->name}}"
                 url="{{route('article.show', compact('article'))}}"
-                urlCategory="{{route('article.byCategory', ['category' => $article->category->id])}}" 
-                urlUser="{{route('article.byUser', ['user' => $article->user->id])}}" 
+                urlCategory="{{route('article.byCategory',['category'=>$article->category->id])}}"
+                urlUser="{{route('article.byUser',['user'=>$article->user->id])}}"
+                readDuration="{{ $article->readDuration()}}"
                 />
             </div>
               
