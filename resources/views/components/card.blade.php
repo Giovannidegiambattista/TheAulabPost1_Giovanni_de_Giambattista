@@ -3,8 +3,20 @@
     <div class="card-body">
         <h5 class="card-title">{{$title}}</h5>
         <p class="card-text">{{$subtitle}}</p>
-        <a href="{{$urlUser}}"  class="small text-muted d-flex justify-content-center align-items-center">{{$user}}</a>
+        @if ($category)
         <a href="{{$urlCategory}}"  class="small text-muted d-flex justify-content-center align-items-center">{{$category}}</a>
+            
+        @else
+            <p class="small text-muted st-italic text-capitalize">Non categorizzato</p>
+        @endif
+
+        @if ($user)
+        <a href="{{$urlUser}}"  class="small text-muted d-flex justify-content-center align-items-center">{{$user}}</a>
+            
+        @else
+            <p class="small text-muted st-italic text-capitalize">Non autenticato</p>
+        @endif
+       
        
        @if ($tags)
            
