@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid p-5 bg-info text-center text-white">
+    <div class="container-fluid p-5 bg-warning text-center text-dark">
         <div class="row justify-content-center">
             <h1 class="display-1">Modifica un articolo</h1>
         </div>
@@ -48,7 +48,7 @@
             <textarea name="body" id="body" cols="30" rows="7" class="form-control">{{$article->body}}</textarea>
         </div>
         <div class="mt-2 d-flex justify-content-center">
-            <button class="btn-info text-white">Inserisci un articolo</button>
+            <button class="btn btn-warning text-dark">Inserisci un articolo</button>
         </div>
     </form>
     </div>

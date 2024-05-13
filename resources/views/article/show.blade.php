@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid p-5 bg-info text-center text-white">
+    <div class="container-fluid p-5 bg-warning text-center text-dark">
         <div class="row justify-content-center">
             <h1 class="display-1">Titolo:{{$article->title}}</h1>
         </div>
@@ -19,7 +19,7 @@
                 <hr>
                 <p>{{$article->body}}</p>
                 <div class="text-center">
-                    <a href="{{route('article.index')}}" class="btn btn-info text-white my-5">Torna indietro</a>
+                    <a href="{{route('article.index')}}" class="btn btn-warning text-dark my-5">Torna indietro</a>
                 </div>
                 <div class="d-flex justify-content-between">
                     @if (Auth::user() && Auth::user()->is_revisor)

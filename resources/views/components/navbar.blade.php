@@ -1,4 +1,5 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
     <div class="container-fluid">
       <a class="navbar-brand" href="{{route('homepage')}}">The Aulab Post</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,8 +65,9 @@
           </li>
             @endguest
             <form class="d-flex" method="GET" action="{{route('article.search')}}">
-              <input class="form-control me-2" type="search" placeholder="Cosa stai cercando?" aria-label="Search" name="query">
-              <button class="btn btn-outline-info" type="submit"> Cerca qui </button>
+             
+              <input class="form-control me-2 " type="search" placeholder="Cosa stai cercando?" aria-label="Search" name="query">
+              <button class="btn btn-outline-warning " type="submit"> Cerca qui </button>
             </form>
           
         </ul>

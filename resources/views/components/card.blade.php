@@ -33,6 +33,6 @@
     <div class="card-footer text-muted d-flex justify-content-center align-items-center">
 Redatto il {{$data}} da  {{$user}}
     <br>
-<a href="{{$url}}" class="btn btn-info text-whte">Leggi</a>
+<a href="{{$url}}" class="btn btn-warning text-dark">Leggi</a>
     </div>
 </div>

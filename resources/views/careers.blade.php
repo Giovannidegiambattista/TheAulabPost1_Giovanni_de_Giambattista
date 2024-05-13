@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid p-5 bg-info text-center text-white">
+    <div class="container-fluid p-5 bg-warning text-center text-dark">
         <div class="row justify-content-center">
             <h1 class="display-1">Lavora con noi</h1>
         </div>
@@ -42,7 +42,7 @@
                 <label for="message" class="form-label">Parlaci di te</label>
                 <textarea name="message" id="message" cols="30" rows="7" class="form-control">{{old('message')}}</textarea>
                 <div class="mt-2">
-                    <button class="btn btn-info text-white">Invia la tua candidatura</button>
+                    <button class="btn btn-warning text-dark">Invia la tua candidatura</button>
                 </div>
                
                </div>

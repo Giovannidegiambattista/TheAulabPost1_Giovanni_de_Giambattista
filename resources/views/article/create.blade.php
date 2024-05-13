@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid p-5 bg-info text-center text-white">
+    <div class="container-fluid p-5 bg-warning text-center text-dark">
         <div class="row justify-content-center">
             <h1 class="display-1">Inserisci un articolo</h1>
         </div>
@@ -37,7 +37,7 @@
         <div class="mb-3">
             <label for="category" class="form-label">Categorie:</label>
             <select name="category" id="category" class="form-control text-capitalise">
-                <option value="" selected >Valore non corretto</option>
+                 <option value="" selected > Valore non corretto </option> 
                 @foreach($categories as $category)
                 <option value="{{$category->id}}">{{$category->name}}</option>
                 @endforeach
@@ -48,7 +48,7 @@
             <textarea name="body" id="body" cols="30" rows="7" class="form-control">{{old('body')}}</textarea>
         </div>
         <div class="mt-2 d-flex justify-content-center">
-            <button class="btn-info text-white">Inserisci un articolo</button>
+            <button class="btn btn-warning text-dark">Inserisci un articolo</button>
         </div>
     </form>
     </div>
